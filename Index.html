@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicacao web - sistema de cadastro item</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header id="header">
+        <div id="logo">
+            <h1>sistema</h1>
+            <h1>Cadastro</h1>
+        </div>
+        <div>
+            <ul id="opcoes">
+                <li>cadastro item</li>
+                <li>Venda</li>
+                <li>Usuario</li>
+            </ul>
+        </div>
+    </header>
+
+    <nav>
+        <div>
+            <h1>Pesquisar Item</h1>
+            <div>
+                <input id="pesquisaInput" type="search" placeholder="Insira o nome do item">
+                <button onclick="pesquisarItem()">Pesquisar</button>
+            </div>
+        </div>
+
+        <div id="cadastrarItem">
+            <h1>Cadastrar</h1>
+            <div>
+                <label>NomeItem<input id="nomeItem" type="text"></label>
+                <label>ValorItem<input id="valorItem" type="number"></label>
+                <label>Descricao<input id="descricaoItem" type="text"></label>
+                <label>Quantidade<input id="quantidadeItem" type="number"></label>
+                <label>Codigo<input id="codigoItem" type="text"></label>
+                <!-- Utilizando o evento onchange para capturar a imagem selecionada -->
+                <label>Foto<input id="imagem" type="file" onchange="carregarImagem(event)"></label>
+                <button onclick="cadastrarItem()">Cadastrar</button>
+            </div>
+        </div>
+    </nav>
+
+    <div id="itens">
+        <!-- Aqui vamos adicionar os itens cadastrados dinamicamente -->
+    </div>
+
+    <script src="scripts/Script.js"></script>
+
+</body>
+</html>
